@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Landing Page</h2>
+    <p>Report ID: {{ report_id }}</p>
+    <form method="post" action="{% url 'trigger_report' %}">
+        {% csrf_token %}
+        <button type="submit">Trigger Report</button>
+    </form>
+{% endblock %}

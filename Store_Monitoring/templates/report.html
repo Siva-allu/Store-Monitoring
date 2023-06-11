@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Report Page</h2>
+    <p>Report ID: {{ report_id }}</p>
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    
+    <a href="{% url 'get_report' %}?report_id={{ report_id }}">Download Report</a>
+    {% endif %}
+{% endblock %}
